@@ -1,0 +1,78 @@
+/* Стили для основного контейнера */
+.home-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Стили для элемента счетчика */
+.home-element.counter {
+    font-size: 18px;
+}
+
+/* Стили для кнопки */
+.home-element.button button {
+    margin-left: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Стили для всплывающего окна */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-buttons {
+    margin-top: 20px;
+}
+
+.confirm-button, .cancel-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+.confirm-button {
+    background-color: #6a9e6b;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #997673;
+    color: white;
+}
+
+/* Дополнительные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
