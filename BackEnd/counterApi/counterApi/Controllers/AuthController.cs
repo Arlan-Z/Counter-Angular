@@ -6,8 +6,13 @@ using System.Text;
 
 [Route("api/[controller]")]
 [ApiController]
+
+
 public class AuthController : ControllerBase
 {
+    private const string LOGIN = "admin",
+            PASSWORD = "admin";
+
     private readonly IConfiguration _configuration;
 
     public AuthController(IConfiguration configuration)
@@ -18,7 +23,7 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public IActionResult Login([FromBody] LoginModel login)
     {
-        if (login.Username == "1" && login.Password == "1")
+        if (login.Username == LOGIN && login.Password == PASSWORD)
         {
             var token = GenerateJwtToken(login.Username);
             return Ok(new { token });
