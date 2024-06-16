@@ -1,0 +1,14 @@
+<div class="home-container">
+    <div class="counter-display">
+      <span>Count: {{ counter }}</span>
+      <button (click)="increment()">Increment</button>
+    </div>
+  
+    <div *ngIf="showPopup" class="popup">
+      <p>Current Counter: {{ counter }}</p>
+      <p>Next Counter: {{ nextCounter }}</p>
+      <button (click)="confirm()">Confirm</button>
+      <button (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+  
