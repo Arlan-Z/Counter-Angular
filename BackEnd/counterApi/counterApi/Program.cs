@@ -4,7 +4,6 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Добавьте CORS политику
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
@@ -16,10 +15,10 @@ builder.Services.AddCors(options =>
         });
 });
 
-// Добавьте сервисы контроллеров
+
 builder.Services.AddControllers();
 
-// Добавьте JWT аутентификацию
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -35,12 +34,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 var app = builder.Build();
 
-// Отключите HTTPS перенаправление
-// app.UseHttpsRedirection();
+
 
 app.UseRouting();
 
-// Используйте CORS политику
+
 app.UseCors("AllowAllOrigins");
 
 app.UseAuthentication();

@@ -16,7 +16,7 @@ export class HomeComponent {
 
   increment() {
     const token = this.authService.getToken();
-    this.http.post<{ newCounter: number }>('http://localhost:5000/api/counter/increment', { counter: this.counter }, {
+    this.http.post<{ newCounter: number }>('http://localhost:5148/api/counter/increment', { counter: this.counter }, {
       headers: {
         Authorization: `Bearer ${token}`
       }

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:7044/api'; // Измените порт на 5000, если используете Kestrel сервер
+  private apiUrl = 'http://localhost:5148/api'; 
   private token: string | null = null;
 
   constructor(private http: HttpClient) {}
